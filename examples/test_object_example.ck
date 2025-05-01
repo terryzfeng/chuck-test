@@ -1,6 +1,9 @@
 @import "../src/test.ck";
 
-// TODO: Overload SinOsc == operator to compare objects
+// TODO: Fix overloading for SinOsc == operator 
+// fun SinOsc @operator ==(SinOsc osc1, SinOsc osc2) {
+//   return osc1.freq() == osc2.freq() && osc1.gain() == osc2.gain();
+// }
 
 public class ObjectTestSuite {
   fun ObjectTestSuite() {
@@ -16,23 +19,25 @@ public class ObjectTestSuite {
   }
 
   fun void GainObjectTest() {
-    Test test("GainObjectTest"); // Create a new test 
+    // Compare two Gain objects by reference
+    Test test("GainObjectTest");
     Gain g => blackhole;
     g @=> Gain g_copy; // Copy reference to Gain object
 
-    // Object assertion defaults to reference equality
-    test.assert(g_copy, g); // Assert that g and g_copy are the same object
+    // Object comparison with reference equality
+    test.expect(g_copy, g); // Assert that g and g_copy are the same object
   }
 
   fun void SineObjectTest() {
-    Test test("SineObjectTest"); // Create a new test 
+    // Compare two SinOsc objects by frequency and gain
+    Test test("SineObjectTest");
     SinOsc osc1 => blackhole;
     SinOsc osc2 => blackhole;
 
-    // Object assertion with SinOsc == overloading
-    test.assert(osc1, osc2); // Assert that osc1 and osc2 are equal
+    // Object comparison with frequency and gain
+    test.expect(osc1, osc2); // Assert that osc1 and osc2 are equal
   }
 }
 
 // RUN TESTS
-MyTestSuite testSuite;
+ObjectTestSuite testSuite;
