@@ -44,8 +44,9 @@ MyTestSuite testSuite;
 
 ## Examples
 
-See [`examples/`](./examples/) for some usage examples.
+See [`examples/`](./examples/) for some test examples.
 
 ## Documentation
 
-`Test` library and framework full documentation: [here](https://ccrma.stanford.edu/~tzfeng/projects/chuck-test/docs)
+`Test` library and framework full documentation: 
+[here](https://ccrma.stanford.edu/~tzfeng/projects/chuck-test/docs/test.html#Test)

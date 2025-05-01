@@ -5,7 +5,7 @@ functions. <br>
 Written by Terry Feng, 2025."
 public class Test {
   // STATIC VARIABLES
-  @doc "Test suite name. Default is 'MyTestSuite'."
+  @doc "Test suite name."
   static string test_suite_name_;
   @doc "Tolerance for floating point comparisons. Default is 0.0001."
   0.0001 => static float float_tolerance_;
@@ -50,7 +50,7 @@ public class Test {
   }
 
   // STATIC FUNCTIONS
-  @doc "Create a test suite with a name."
+  @doc "Create a test suite with a name. Returns test suite name."
   fun static string createSuite(string test_suite_name) {
     <<< "Create test suite:", test_suite_name >>>;
     <<< "---", "" >>>;
