@@ -1,0 +1,131 @@
+<html>
+<link rel="stylesheet" type="text/css" href="ckdoc.css" />
+<link rel="stylesheet" type="text/css" href="class.css" />
+<title>Testing</title>
+<body>
+<a name="top"/>
+<div id="title">
+<div class="titleL">
+<div style="display: flex; align-items: center;"><div class="inline titlelogo"><a href="https://chuck.stanford.edu/" target="_blank"><img src="https://chuck.stanford.edu/doc/images/chuck-logo2023w.png" /> </div><div class="inline"><h1><a href="./">ChucK Class Library Reference</a></h1></div>
+<div class="inline gray"><h1>&nbsp;&nbsp;<span style="color:black">/</span>&nbsp;&nbsp;Testing</h1></div>
+</div>
+</div>
+</div>
+<div id="body">
+<div class="toc"><a id="toc"/>
+<p class="toc_class"><a href="#Test" class="ckdoc_typename ckdoc_type_object">Test</a></p>
+</div>
+<div class="classes">
+<p class="group_desc"></p>
+<a name="Test" /><div class="class">
+<h2 class="class_title" name="Test">Test</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">A testing libary and framework for ChucK. Contains assert() and expect() 
+functions. <br>
+<br>
+Written by Terry Feng, 2025.<p>
+<h3 class="class_section_header">constructors</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="membername">Test</span>()</p>
+<p class="member_description">Constructor for Test class with default 'MyTest' name.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">Test</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> test_name)</p>
+<p class="member_description">Constructor for Test class with test name.</p>
+</div>
+</div>
+<h3 class="class_section_header">member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">assert</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">int</span> expected)</p>
+<p class="member_description">Assert two integers to be equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">assert</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">float</span> expected)</p>
+<p class="member_description">Expect two floats to be equal or within float tolerance.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">assert</span>(<span class="ckdoc_typename ckdoc_type_object">Object</span> actual, <span class="ckdoc_typename ckdoc_type_object">Object</span> expected)</p>
+<p class="member_description">Assert two Objects to be equal. Will compare references by default. 
+  Override the == operator for custom comparison.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">assertFalse</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual)</p>
+<p class="member_description">Assert an expression to be zero (false).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">assertTrue</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual)</p>
+<p class="member_description">Assert an expression to be non-zero (true).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">int</span> expected)</p>
+<p class="member_description">Expect two integers to be equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">float</span> expected)</p>
+<p class="member_description">Expect two floats to be equal or within float tolerance.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_object">Object</span> actual, <span class="ckdoc_typename ckdoc_type_object">Object</span> expected)</p>
+<p class="member_description">Expect two Objects to be equal. Will compare references by default. 
+  Override the == operator for custom comparison.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> expected)</p>
+<p class="member_description">Expect two int arrays to be equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> actual, <span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> expected)</p>
+<p class="member_description">Expect two float arrays to be equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expect</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> actual, <span class="ckdoc_typename ckdoc_type_object">string</span> expected)</p>
+<p class="member_description">Expect two strings to be equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expectFalse</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual)</p>
+<p class="member_description">Expect an expression to evaluate to zero (false).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">expectTrue</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> actual)</p>
+<p class="member_description">Expect an expression to evaluate to non-zero (true).</p>
+</div>
+</div>
+<h3 class="class_section_header">static member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">createSuite</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> test_suite_name)</p>
+<p class="member_description">Create a test suite with a name.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">setTolerance</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> tolerance)</p>
+<p class="member_description">Set the tolerance for floating point comparisons. Default is 0.0001.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">summary</span>()</p>
+<p class="member_description">Print a summary of the test suite (tests passed / total).</p>
+</div>
+</div>
+<h3 class="class_section_header">member variables</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">test_name_</span></p><p class="member_description">Test name.</p>
+</div>
+</div>
+<h3 class="class_section_header">static member variables</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">float_tolerance_</span></p><p class="member_description">Tolerance for floating point comparisons. Default is 0.0001.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">test_suite_name_</span></p><p class="member_description">Test suite name. Default is 'MyTestSuite'.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+</div>
+</div>
+</body>
+</html>
