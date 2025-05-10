@@ -1,13 +1,13 @@
-# ChucK Test
+# CKTest (ChucK Test)
 
 A testing libary and framework for ChucK. Contains assert() and expect() functions.
 
 ## Get Started
 
-First install the `Test` package with ChucK package manager `chump`.
+First install the `CKTest` package with ChucK package manager `chump`.
 
 ```
-chump <command here>
+chump install CKTest
 ```
 
 Create a test file for unit testing.
