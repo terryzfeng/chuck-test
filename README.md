@@ -13,22 +13,22 @@ chump <command here>
 Create a test file for unit testing.
 
 ```java
-@import "test.ck"
+@import "CKTest.ck"
 
 public class MyTestSuite {
   fun MyTestSuite() {
     // Create a test suite with a name
-    Test.createSuite("MyTestSuite"); 
+    CKTest.createSuite("MyTestSuite");
 
     // Call your test functions here
     MyFirstTest();
 
     // Print test suite summary
-    Test.summary(); 
+    CKTest.summary();
   }
 
   fun void MyFirstTest() {
-    Test test("MyFirstTest"); // Create a new test 
+    CKTest test("MyFirstTest"); // Create a new test
     1 => int a;
     2 => int b;
 
@@ -44,9 +44,9 @@ MyTestSuite testSuite;
 
 ## Examples
 
-See [`examples/`](./examples/) for some test examples.
+See [`src/examples/`](./src/examples/) for some test examples.
 
 ## Documentation
 
-`Test` library and framework full documentation: 
+`CKTest` library and framework full documentation:
 [here](https://ccrma.stanford.edu/~tzfeng/projects/chuck-test/docs/test.html#Test)

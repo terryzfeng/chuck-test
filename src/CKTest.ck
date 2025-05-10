@@ -3,7 +3,9 @@
 functions. <br>
 <br>
 Written by Terry Feng, 2025."
-public class Test {
+public class CKTest {
+  "1.0.0" => static string version;
+
   // STATIC VARIABLES
   @doc "Test suite name."
   static string test_suite_name_;
@@ -24,12 +26,12 @@ public class Test {
 
   // CONSTRUCTORS
   @doc "Constructor for Test class with default 'MyTest' name."
-  fun Test() {
-    Test("MyTest");
+  fun CKTest() {
+    CKTest("MyTest");
   }
 
   @doc "Constructor for Test class with test name."
-  fun Test(string test_name) {
+  fun CKTest(string test_name) {
     test_name => test_name_;
     1 => test_state_;
     num_tests_++;

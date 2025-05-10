@@ -1,6 +1,6 @@
-@import "../src/test.ck";
+@import "../CKTest.ck";
 
-// TODO: Fix overloading for SinOsc == operator 
+// TODO: Fix overloading for SinOsc == operator
 // fun SinOsc @operator ==(SinOsc osc1, SinOsc osc2) {
 //   return osc1.freq() == osc2.freq() && osc1.gain() == osc2.gain();
 // }
@@ -8,19 +8,19 @@
 public class ObjectTestSuite {
   fun ObjectTestSuite() {
     // Create a test suite with a name
-    Test.createSuite("ObjectTestSuite"); 
+    CKTest.createSuite("ObjectTestSuite");
 
     // Call your test functions here
     GainObjectTest();
     SineObjectTest();
 
     // Print summary of all tests
-    Test.summary(); 
+    CKTest.summary();
   }
 
   fun void GainObjectTest() {
     // Compare two Gain objects by reference
-    Test test("GainObjectTest");
+    CKTest test("GainObjectTest");
     Gain g => blackhole;
     g @=> Gain g_copy; // Copy reference to Gain object
 
@@ -30,7 +30,7 @@ public class ObjectTestSuite {
 
   fun void SineObjectTest() {
     // Compare two SinOsc objects by frequency and gain
-    Test test("SineObjectTest");
+    CKTest test("SineObjectTest");
     SinOsc osc1 => blackhole;
     SinOsc osc2 => blackhole;
 
