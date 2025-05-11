@@ -1,5 +1,5 @@
-@import "../src/test.ck";
+@import "../src/CKTest.ck";
 
 CKDoc ckdoc;
-ckdoc.addGroup(["Test"], "Testing", "test", "");
+ckdoc.addGroup(["CKTest"], "Testing", "test", "");
 ckdoc.outputToDir("../docs", "ChucK Test" );
